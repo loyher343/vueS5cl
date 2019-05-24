@@ -1,24 +1,23 @@
 <template>
-    <div>
-        <h1>Tis better to vie than vie esteem</h1>
+    <div class="col-full">
+        <h1>Welcome to the Forum</h1>
+        <ThreadList :threads="threads"/>
     </div>
 </template>
 
 <script>
 
     import sourceData from '@/data'
+    import ThreadList from '@/components/ThreadList'
 
     export default {
-        props:{
-            id: {
-                required: true,
-                // type: string
-            }
+        components: {
+            ThreadList
         },
         data () {
             console.log(this)
             return{
-                thread: sourceData.threads[this.id],
+                threads: Object.values(sourceData.threads),
                 posts: sourceData.posts,
                 users: sourceData.users
             }

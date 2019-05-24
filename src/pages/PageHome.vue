@@ -23,10 +23,10 @@
 import sourceData from '@/data'
 console.log(sourceData.threads)
 
-import ThreadList from './ThreadList'
+import ThreadList from '@/components/ThreadList'
 
 export default {
-  name: 'HelloWorld',
+  // name: 'PageHome',
 
   components:{
     ThreadList
